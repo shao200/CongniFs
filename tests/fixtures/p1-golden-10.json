@@ -1,0 +1,77 @@
+{
+  "version": "0.1-skeleton",
+  "phase": "P1",
+  "purpose": "编译层评测骨架：用例输入与期望结构已冻结，expected 阈值待实现后由金标集实测校准",
+  "cases": [
+    {
+      "id": "W01",
+      "question": "向量数据库在这套系统里做什么？",
+      "source_quote": "向量数据库用于语义检索，与 FTS5 关键词召回互补。",
+      "expected": { "should_distill": true, "wiki_kind": "concept", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W02",
+      "question": "今天中午吃什么？",
+      "source_quote": "一次性闲聊，无复用价值。",
+      "expected": { "should_distill": false, "wiki_kind": null, "min_evidence": 0, "route": "source" },
+      "status": "pending"
+    },
+    {
+      "id": "W03",
+      "question": "编译层的 θ_wiki 初值是多少？",
+      "source_quote": "θ_wiki 初值 0.75，用金标集校准。",
+      "expected": { "should_distill": true, "wiki_kind": "concept", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W04",
+      "question": "为什么 wiki 页定为对等实体而不是纯投影？",
+      "source_quote": "保留人类可手工纠错的核心价值。",
+      "expected": { "should_distill": true, "wiki_kind": "decision", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W05",
+      "question": "上次搜索超时是怎么处理的？",
+      "source_quote": "原因与改进记录。",
+      "expected": { "should_distill": true, "wiki_kind": "incident", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W06",
+      "question": "怎么确认一条沉淀建议？",
+      "source_quote": "单键确认；拒绝需填原因。",
+      "expected": { "should_distill": true, "wiki_kind": "howto", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W07",
+      "question": "这个项目叫什么名字？",
+      "source_quote": "CongniFs 是本地优先的知识中心 RAG 系统。",
+      "expected": { "should_distill": true, "wiki_kind": "project", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W08",
+      "question": "某条链接指向尚未创建的页面时怎么办？",
+      "source_quote": "目标不存在标记为 stub，不得静默丢弃。",
+      "expected": { "should_distill": true, "wiki_kind": "concept", "min_evidence": 1, "route": "wiki" },
+      "status": "pending"
+    },
+    {
+      "id": "W09",
+      "question": "没有原文证据的草稿能入库吗？",
+      "source_quote": "无 evidence 的页不得 active。",
+      "expected": { "should_distill": false, "wiki_kind": null, "min_evidence": 0, "route": "source" },
+      "status": "pending"
+    },
+    {
+      "id": "W10",
+      "question": "wiki 分数不够时应该用什么回答？",
+      "source_quote": "低于阈值必须召回 source 原文兜底。",
+      "expected": { "should_distill": true, "wiki_kind": "concept", "min_evidence": 1, "route": "source" },
+      "status": "pending"
+    }
+  ]
+}
